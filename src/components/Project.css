@@ -1,0 +1,15 @@
+/* Projects.css */
+
+.image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-image {
+    width: 100%;
+    height: 200px; /* Set the desired height */
+    object-fit: cover; /* Maintain aspect ratio while covering the element */
+    border-radius: 8px; /* Optional: To keep the rounded corners */
+}

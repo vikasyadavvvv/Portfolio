@@ -1,57 +1,56 @@
-import project1 from "../assets/projects/project-1.png"
-import project2 from "../assets/projects/project-2.png";
+import project1a from "../assets/projects/c1.png";
+import project1b from "../assets/projects/c2.png";
+import project1c from "../assets/projects/c3.png";
+import project1d from "../assets/projects/c4.png"
+
+import project2a from "../assets/projects/ch1.png"
+import project2b from "../assets/projects/ch2.png"
+import project2c from "../assets/projects/ch3.png"
+import project2d from "../assets/projects/ch4.png"
+
+
 
 export const HERO_CONTENT = `Passionate about crafting dynamic and responsive web applications, I am a full stack developer proficient in React, Tailwind CSS, Node.js, Express.js, and MongoDB. Committed to delivering unparalleled quality, I bring a fresh perspective and a hunger for knowledge to every project. Ready to contribute my expertise and unleash creativity in innovative and collaborative environments.`;
 
-export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for creating efficient and user-friendly web applications. Proficient in a variety of technologies, including React, Node.js, MySQL, and MongoDB, I am eager to embark on my journey in the field of web development.My fascination with how things work led me to pursue web development, and I am excited to turn that passion into a fulfilling career. While I may be a fresher in the industry, I bring a deep curiosity and a strong willingness to learn and adapt to new challenges.I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
+export const ABOUT_TEXT = `"I'm a dedicated and versatile full stack developer passionate about creating efficient and user-friendly web applications. Proficient in React, Node.js, MySQL, and MongoDB, I'm eager to embark on my journey in web development. My fascination with how things work led me to pursue web development, and I'm excited to turn that passion into a fulfilling career. As a fresher, I bring a deep curiosity and a strong willingness to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies."
 
+`;
 
 export const PROJECTS = [
-
-
-
   {
     title: "Real Time Chat App",
-    image: project2,
-    description:
-      `
-I'm thrilled to have built a feature-rich application leveraging the power of modern technologies:
-🌟 Tech Stack: MERN (MongoDB, Express, React, Node.js) + Socket.io + TailwindCSS + DaisyUI
-🎃 Authentication & Authorization: Secure implementation using JWT.
-👾 Real-Time Messaging: Seamless communication with Socket.io.
-🚀 Online User Status: Dynamic user presence updates with Socket.io and React Context.
-👌 Global State Management: Efficient state handling using Zustand.
-🐞 Robust Error Handling: Comprehensive error management on both server and client sides.
-⭐ Professional Deployment: Deployed like a pro at zero cost!
-⏳ And much more!
-`
-,
-    technologies: ["MERN", "MongoDB", "React","Node.js","Socket.io","TailwindCSS","DaisyUI"],
-    link: [
-      { url:"https://chatapp-dhsa.onrender.com/"}
+    images: [project2b,project2c,project2a,project2d], // Updated to include multiple images
+    description: `
+Developed a comprehensive and feature-rich web application utilizing modern technologies. The application includes:
+
+Tech Stack: MERN (MongoDB, Express, React, Node.js), Socket.io, TailwindCSS, and DaisyUI.
+Authentication & Authorization: Implemented secure authentication and authorization using JWT.
+Real-Time Messaging: Enabled seamless communication with Socket.io.
+Online User Status: Implemented dynamic user presence updates with Socket.io and React Context.
+Global State Management: Utilized Zustand for efficient state handling.
+Robust Error Handling: Implemented comprehensive error management on both server and client sides.
+Professional Deployment: Successfully deployed the application at zero cost
+    `,
+    technologies: ["MERN", "MongoDB", "React", "Node.js", "Socket.io", "TailwindCSS", "DaisyUI"],
+    links: [
+      { url: "https://chatapp-dhsa.onrender.com/",github:"https://github.com/vikasyadavvvv/Mern-ChatApp.git" }
     ]
-
-    
-
   },
-
   {
-    title: "Music App like Spotify",
-    image: project1,
-    description:
-      " A sleek and immersive music app inspired by Spotify! 💻 Leveraging HTML, CSS, Bootstrap, and JavaScript, I've crafted an engaging user experience complete with seamless music playback, intuitive navigation, and customizable volume controls. 🚀 Bootstrap Icons were a game-changer, streamlining design and enhancing aesthetics. .",
-    technologies: ["HTML", "CSS", "Javascript",],
-    link: [
-      { url:"https://listenmusicc.netlify.app"}
+    title: "Crypto Curency Tracker",
+    images: [project1a, project1b ,project1c,project1d], // Updated to include multiple images
+    description: `Developed a comprehensive cryptocurrency tracker application using React, CSS, and the CoinGecko API. Cryptotracker provides updated information on cryptocurrency prices, market trends, and market capitalization.Access to cryptocurrency prices, market capitalization, and 24-hour changes.Comprehensive coverage of both leading and emerging cryptocurrencies.Clean and intuitive design for easy navigation.
+Responsiv interface ensuring a seamless user experience across all devices.
+
+    `,
+    technologies: ["React", "CSS", "CoinGeko API"],
+    links: [
+      { url: "https://cryppto-tracker.netlify.app/" , github:"https://github.com/vikasyadavvvv/Crypto-Tracker.git" }
     ]
-  
   },
-
-
-
 ];
 
 export const CONTACT = {
-  phoneNo: "+919082539010 ",
+  phoneNo: "+919082539010",
   email: "vy532555@gmail.com",
 };
