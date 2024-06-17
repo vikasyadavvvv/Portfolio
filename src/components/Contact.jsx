@@ -22,6 +22,54 @@ const Contact = () => {
         }
     };
 
+    const formVariants = {
+        hidden: { opacity: 0, y: 50 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 1,
+                delay: 0.5
+            }
+        }
+    };
+
+    const nameVariants = {
+        hidden: { x: -100, opacity: 0 },
+        visible: {
+            x: 0,
+            opacity: 1,
+            transition: {
+                duration: 0.5,
+                delay: 0.7
+            }
+        }
+    };
+
+    const feedbackVariants = {
+        hidden: { x: 100, opacity: 0 },
+        visible: {
+            x: 0,
+            opacity: 1,
+            transition: {
+                duration: 0.5,
+                delay: 0.7
+            }
+        }
+    };
+
+    const buttonVariants = {
+        hidden: { y: 100, opacity: 0 },
+        visible: {
+            y: 0,
+            opacity: 1,
+            transition: {
+                duration: 0.5,
+                delay: 0.9
+            }
+        }
+    };
+
     const handleNameChange = (e) => {
         setName(e.target.value);
     };
@@ -75,19 +123,48 @@ const Contact = () => {
                     <SiGmail className="text-7xl text-red-400 hover:cursor-pointer" />
                 </motion.a>
             </div>
-            <form onSubmit={handleSubmit} className="mt-10 px-4 lg:w-1/3">
-                <div className="flex flex-col mb-4 ">
+            <motion.form
+                variants={formVariants}
+                initial="hidden"
+                animate="visible"
+                onSubmit={handleSubmit}
+                className="mt-10 px-4 lg:w-1/3"
+            >
+                <motion.div variants={nameVariants} className="flex flex-col mb-4">
                     <label htmlFor="name" className="text-lg mb-2 font-bold">Name</label>
-                    <input type="text" id="name" value={name} onChange={handleNameChange} placeholder="Name" className="border-2 border-neutral-800 rounded-md px-3 py-2 focus:outline-none focus:border-white text-black  bg-purple-500" required />
-                </div>
-                <div className="flex flex-col mb-4 font-bold">
+                    <input
+                        type="text"
+                        id="name"
+                        value={name}
+                        onChange={handleNameChange}
+                        placeholder="Name"
+                        className="border-2 border-neutral-800 rounded-md px-3 py-2 focus:outline-none focus:border-white text-black bg-purple-500"
+                        required
+                    />
+                </motion.div>
+                <motion.div variants={feedbackVariants} className="flex flex-col mb-4 font-bold">
                     <label htmlFor="feedback" className="text-lg mb-2">Feedback</label>
-                    <textarea id="feedback" value={feedback} onChange={handleFeedbackChange} placeholder='Your Feedback...' className="border-2 border-neutral-800 rounded-md px-3 py-2 focus:outline-none focus:border-white text-black  bg-purple-500" rows="5" required></textarea>
-                </div>
-                <button type="submit" className={`bg-white text-black px-4 py-2 rounded-md hover:font-bold duration-300\ ${submitted ? 'cursor-not-allowed opacity-50' : ''}`} disabled={submitted}>
+                    <textarea
+                        id="feedback"
+                        value={feedback}
+                        onChange={handleFeedbackChange}
+                        placeholder="Your Feedback..."
+                        className="border-2 border-neutral-800 rounded-md px-3 py-2 focus:outline-none focus:border-white text-black bg-purple-500"
+                        rows="5"
+                        required
+                    ></textarea>
+                </motion.div>
+                <motion.button
+                    type="submit"
+                    className={`bg-white text-black px-4 py-2 rounded-md hover:font-bold duration-300 ${
+                        submitted ? 'cursor-not-allowed opacity-50' : ''
+                    }`}
+                    disabled={submitted}
+                    variants={buttonVariants}
+                >
                     {submitted ? 'Submitted' : 'Submit'}
-                </button>
-            </form>
+                </motion.button>
+            </motion.form>
         </div>
     );
 }
